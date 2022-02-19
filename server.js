@@ -6,6 +6,8 @@ const app = express();
 
 app.use(userRouter);
 
+app.use(express.static("view"));
+
 // ! Connect to mongodb
 mongoose
     .connect("mongodb://127.0.0.1:27017/newshop")
