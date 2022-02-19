@@ -20,3 +20,25 @@ export const createUser = (req, res, next) => {
         })
         .catch((err) => console.log("ERRR", err));
 };
+
+export const loginUser = (req, res, next) => {
+    const userInfo = req.body;
+    const email = userInfo.email;
+    const password = userInfo.password;
+    User.findOne({ email: email })
+        .exec()
+        .then((user) => {
+            if (user) {
+                bcrypt.compare(password, user.password).then((isReal) => {
+                    if (isReal) {
+                        res.send({ message: "Welcome back" });
+                    } else {
+                        res.send({ message: "Incorrect password" });
+                    }
+                });
+            } else {
+                res.send({ message: "Please register" });
+            }
+        })
+        .catch(() => console.log("Some thing went wrong!"));
+};
