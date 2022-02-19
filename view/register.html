@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="name" placeholder="Your name please" />
+        <input type="email" id="email" placeholder="Your email please" />
+        <input type="number" id="age" />
+        <input type="password" id="password" />
+        <button id="btn">create user</button>
+    </div>
+
+    <script>
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const age = document.getElementById("age");
+        const password = document.getElementById("password");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            const payload = {
+                name: name.value,
+                email: email.value,
+                age: age.value,
+                password: password.value,
+            };
+        });
+        fetch("http://127.0.0.1:1337/register", {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+    </script>
+</body>
+
+</html>
