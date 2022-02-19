@@ -1,12 +1,17 @@
 import express from "express";
 import mongoose from "mongoose";
 import userRouter from "./routes/user.js";
+import cors from "cors";
 
 const app = express();
 
+app.use(express.json());
+
+app.use(cors());
+
 app.use(userRouter);
 
-app.use(express.static("view"));
+app.use(express.static("view")); // serve static files
 
 // ! Connect to mongodb
 mongoose
