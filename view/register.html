@@ -6,39 +6,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-    <style>
-        input {
-            padding: 8px;
-            border-radius: 8px;
-            border: 1px solid #c4c4c4;
-            font-weight: 600;
-            display: block;
-            margin: 8px 0;
-        }
-        
-        button {
-            padding: 8px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            background-color: #e2ad1d;
-            border-radius: 8px;
-            margin-top: 8px;
-            cursor: pointer;
-        }
-        
-        .contaner {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/add.css" />
 </head>
 
 <body>
+    <nav>
+        <a href="https://shop-gmc.herokuapp.com/">
+            <h3 class="logo">Shop</h3>
+        </a>
+
+        <ul>
+            <li>
+                <a href="https://shop-gmc.herokuapp.com/">Home</a>
+            </li>
+            <li>
+                <a href="https://shop-gmc.herokuapp.com/add.html">Add product</a>
+            </li>
+            <li>
+                <a href="https://shop-gmc.herokuapp.com/login.html">Login</a>
+            </li>
+            <li>
+                <a href="https://shop-gmc.herokuapp.com/register.html">Sign up</a>
+            </li>
+        </ul>
+
+        <img height="35px" width="35px" id="menu" src="./images/menu.png" alt="" />
+    </nav>
+    <ul class="menu-mobile">
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/">Home</a>
+        </li>
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/add.html">Add product</a>
+        </li>
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/login.html">Login</a>
+        </li>
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/register.html">Sign up</a>
+        </li>
+    </ul>
+
     <div class="contaner">
-        <h4>Hello create you account with us</h4>
+        <h4 id="title">Hello create you account with us</h4>
         <input type="text" id="name" placeholder="Your name please" />
         <input type="email" id="email" placeholder="Your email please" />
         <input type="number" id="age" placeholder="Your age (optional)" />
@@ -69,6 +80,7 @@
             });
         });
     </script>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>

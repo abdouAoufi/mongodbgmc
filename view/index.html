@@ -7,42 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/main.css" />
 </head>
 
 <body>
     <nav>
-        <a href="#" class="logo">logo</a>
+        <a href="https://shop-gmc.herokuapp.com/">
+            <h3 class="logo">Shop</h3>
+        </a>
+
         <ul>
             <li>
-                <a class="active" href="https://shop-gmc.herokuapp.com/index.html">home</a
-          >
-        </li>
-        <li>
-          <a href="https://shop-gmc.herokuapp.com/add.html">add product</a>
+                <a href="https://shop-gmc.herokuapp.com/">Home</a>
             </li>
-            <li><a href="https://shop-gmc.herokuapp.com/login.html">login</a></li>
             <li>
-                <a href="https://shop-gmc.herokuapp.com/register.html">signup</a>
+                <a href="https://shop-gmc.herokuapp.com/add.html">Add product</a>
+            </li>
+            <li>
+                <a href="https://shop-gmc.herokuapp.com/login.html">Login</a>
+            </li>
+            <li>
+                <a href="https://shop-gmc.herokuapp.com/register.html">Sign up</a>
             </li>
         </ul>
-    </nav>
-    <h1>Our products</h1>
 
-    <section class="container">
-        <!-- <div class="product">
-        <h3>product Name</h3>
-        <h4>Small description</h4>
-        <img
-          src="https://i5.walmartimages.com/asr/949b3d42-8f36-43b1-a7f5-6d7ecd2f3b93.d19162940a28e3ff1139216526dec307.jpeg"
-          alt=""
-        />
-        <h4 id="price">price : 450DA</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          autem quasi itaque!
-        </p>
-      </div> -->
-    </section>
+        <img height="35px" width="35px" id="menu" src="./images/menu.png" alt="" />
+    </nav>
+    <ul class="menu-mobile">
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/">Home</a>
+        </li>
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/add.html">Add product</a>
+        </li>
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/login.html">Login</a>
+        </li>
+        <li>
+            <a href="https://shop-gmc.herokuapp.com/register.html">Sign up</a>
+        </li>
+    </ul>
+
+    <section class="container"></section>
 
     <section class="parent" id="parent">
         <div class="contaner">
@@ -61,6 +67,7 @@
     </section>
 
     <script src="./script/home.js"></script>
+    <script src="./script/main.js"></script>
 </body>
 
 </html>

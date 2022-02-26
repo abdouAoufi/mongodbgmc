@@ -13,6 +13,10 @@ app.use(cors());
 app.use(userRouter);
 app.use(productRouter);
 
+app.use("*", (req, res, next) => {
+    res.redirect("https://shop-gmc.herokuapp.com/index.html")
+})
+
 app.use(express.static("view")); // serve static files
 
 // ! Connect to mongodb
