@@ -17,11 +17,13 @@ app.use(express.static("view")); // serve static files
 
 // ! Connect to mongodb
 mongoose
-    .connect("mongodb://127.0.0.1:27017/newshop")
+    .connect(
+        "mongodb+srv://hello:1234@firsttry.vojoa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    )
     .then(() => {
         console.log("Connected successfuly to database");
         //! Execute node server
-        app.listen(1337, () => {
+        app.listen(process.env.PORT || 3000, () => {
             console.log("Node server started");
         });
     })
