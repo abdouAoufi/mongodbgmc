@@ -24,3 +24,15 @@ export const getAllProducts = (req, res, next) => {
             res.json({ message: err.message });
         });
 };
+
+export const updateProduct = (req, res, next) => {
+    const newInfo = req.body;
+    Product.updateOne({ name: newInfo.name }, newInfo)
+        .exec()
+        .then(() => {
+            res.json({ message: "Product updated" });
+        })
+        .catch((err) => {
+            res.json({ message: err.message });
+        });
+};

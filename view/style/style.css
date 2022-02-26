@@ -39,3 +39,44 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    font-weight: 600;
+    display: block;
+    margin: 8px 0;
+}
+
+button {
+    padding: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: #e2ad1d;
+    border-radius: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.contaner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.parent {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

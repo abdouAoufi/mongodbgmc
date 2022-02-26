@@ -23,7 +23,6 @@ const producSchema = new Schema({
     },
     img: {
         type: Schema.Types.String,
-        required: true,
         default: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthealmanian.com%2Fwp-content%2Fuploads%2F2019%2F01%2Fproduct_image_thumbnail_placeholder.png&f=1&nofb=1",
     },
 });

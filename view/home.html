@@ -28,33 +28,20 @@
       </div> -->
     </section>
 
-    <script>
-        const container = document.querySelector(".container");
-        this.onload = () => {
-            fetch("http://127.0.0.1:1337/product").then((res) =>
-                res.json().then((data) => {
-                    data.products.forEach((singleProduct) => {
-                        const product = `
-     <div class="product">
-        <h3>${singleProduct.name}</h3>
-        <img
-          src=${singleProduct.img}
-          alt=${singleProduct.name}
-        />
-        <h4 id="price">${singleProduct.price} DA</h4>
-        <p>
-          ${singleProduct.desc}
-        </p>
-      </div>
-      `;
-                        const cont = document.createElement("div");
-                        cont.innerHTML = product;
-                        container.append(cont);
-                    });
-                })
-            );
-        };
-    </script>
+    <section class="parent" id="parent">
+        <div class="contaner">
+            <h4>update you product </h4>
+            <input type="text" id="name" placeholder="Your product name please" />
+            <input type="number" id="price" placeholder="Your product price please" />
+            <input type="text" id="desc" placeholder="Description of product" />
+            <input type="text" id="img" placeholder="Your image of product" />
+            <p id="result"></p>
+            <button id="btn">update product</button>
+            <button id="close">close</button>
+        </div>
+    </section>
+
+    <script src="./script/home.js"></script>
 </body>
 
 </html>
