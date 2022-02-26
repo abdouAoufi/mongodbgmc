@@ -14,7 +14,7 @@ app.use(userRouter);
 app.use(productRouter);
 
 app.use("*", (req, res, next) => {
-    res.redirect("https://shop-gmc.herokuapp.com/index.html")
+    res.redirect("/")
 })
 
 app.use(express.static("view")); // serve static files
