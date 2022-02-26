@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+        input {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid #c4c4c4;
+            font-weight: 600;
+            display: block;
+            margin: 8px 0;
+        }
+        
+        button {
+            padding: 8px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            background-color: #e2ad1d;
+            border-radius: 8px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        
+        .contaner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contaner">
+        <h4>Hello create you product with us</h4>
+        <input type="text" id="name" placeholder="Your product name please" />
+        <input type="number" id="price" placeholder="Your product price please" />
+        <input type="text" id="desc" placeholder="Description of product" />
+        <input type="text" id="img" placeholder="Your image of product" />
+        <button id="btn">create product</button>
+    </div>
+
+    <script>
+        const name = document.getElementById("name");
+        const price = document.getElementById("price");
+        const desc = document.getElementById("desc");
+        const img = document.getElementById("img");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            const payload = {
+                name: name.value,
+                price: price.value,
+                desc: desc.value,
+                img: img.value,
+            };
+            fetch("http://127.0.0.1:1337/add-product", {
+                method: "POST",
+                body: JSON.stringify(payload),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
