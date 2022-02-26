@@ -62,7 +62,7 @@
                 desc: desc.value,
                 img: img.value,
             };
-            fetch("http://127.0.0.1:1337/product", {
+            fetch("https://shop-gmc.herokuapp.com/product", {
                 method: "POST",
                 body: JSON.stringify(payload),
                 headers: {
