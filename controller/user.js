@@ -3,7 +3,6 @@ import bcrypt from "bcryptjs";
 
 export const createUser = (req, res, next) => {
     const userInfo = req.body;
-    console.log(userInfo.password);
     bcrypt
         .hash(userInfo.password, 12)
         .then((hasehPasswrd) => {

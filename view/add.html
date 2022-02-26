@@ -43,6 +43,7 @@
         <input type="number" id="price" placeholder="Your product price please" />
         <input type="text" id="desc" placeholder="Description of product" />
         <input type="text" id="img" placeholder="Your image of product" />
+        <p id="result"></p>
         <button id="btn">create product</button>
     </div>
 
@@ -52,6 +53,7 @@
         const desc = document.getElementById("desc");
         const img = document.getElementById("img");
         const btn = document.getElementById("btn");
+        const result = document.getElementById("result");
 
         btn.addEventListener("click", () => {
             const payload = {
@@ -66,7 +68,11 @@
                 headers: {
                     "Content-Type": "application/json",
                 },
-            });
+            }).then((res) =>
+                res.json().then((data) => {
+                    result.innerText = data.message;
+                })
+            );
         });
     </script>
 </body>
