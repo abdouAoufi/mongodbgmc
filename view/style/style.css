@@ -10,18 +10,20 @@ body {
     background: linear-gradient(#a9a9a9, #008b8b);
 }
 
-header {
+nav {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #fff;
 }
 
-header .logo {
+nav .logo {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
@@ -30,26 +32,26 @@ header .logo {
     letter-spacing: 2px;
 }
 
-header ul {
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header ul li {
+nav ul li {
     list-style: none;
     margin-left: 20px;
 }
 
-header ul li a {
+nav ul li a {
     text-decoration: none;
     padding: 6px 15px;
     color: #fff;
     border-radius: 20px;
 }
 
-header ul li a:hover,
-header ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
     background: #fff;
     color: #2b1055;
 }
