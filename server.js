@@ -13,9 +13,7 @@ app.use(cors());
 app.use(userRouter);
 app.use(productRouter);
 
-app.use("*", (req, res, next) => {
-    res.redirect("/")
-})
+
 
 app.use(express.static("view")); // serve static files
 
