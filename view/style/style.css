@@ -5,6 +5,11 @@
     font-family: 'poppins', sans-serif;
 }
 
+body {
+    min-height: 100vh;
+    background: linear-gradient(#A9A9A9, #008B8B);
+}
+
 header {
     position: absolute;
     top: 0;
