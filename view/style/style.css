@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: "poppins", sans-serif;
 }
 
 body {
     min-height: 100vh;
-    background: linear-gradient(#A9A9A9, #008B8B);
+    background: linear-gradient(#a9a9a9, #008b8b);
 }
 
 header {
@@ -67,6 +67,8 @@ body {
     padding: 8px;
     border-radius: 8px;
     border: 2px solid #c4c4c4;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px #796f6f;
 }
 
 .product h3 {

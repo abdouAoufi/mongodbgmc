@@ -23,7 +23,7 @@ function getData() {
         res.json().then((data) => {
             data.products.forEach((singleProduct) => {
                 const product = `
-                            <div class="product">
+                            <div  class="product">
                              <h3>${singleProduct.name}</h3>
                                <img
                                  src=${singleProduct.img}
