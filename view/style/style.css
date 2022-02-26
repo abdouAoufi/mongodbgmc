@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.product {
+    max-width: 400px;
+    height: auto;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #c4c4c4;
+}
+
+.product h3 {
+    font-weight: 500;
+}
+
+.product img {
+    width: auto;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+#price {
+    color: darkorange;
+    font-weight: 600;
+}
+
+.product p {
+    color: #796f6f;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
