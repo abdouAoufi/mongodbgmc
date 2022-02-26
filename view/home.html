@@ -6,23 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css" />
 </head>
 
 <body>
     <h1>Our products</h1>
 
     <section class="container">
-        <div class="product">
-            <h3>product Name</h3>
-            <h4>Small description</h4>
-            <img src="https://i5.walmartimages.com/asr/949b3d42-8f36-43b1-a7f5-6d7ecd2f3b93.d19162940a28e3ff1139216526dec307.jpeg" alt="" />
-            <h4 id="price">price : 450DA</h4>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem quasi itaque!
-            </p>
-        </div>
+        <!-- <div class="product">
+        <h3>product Name</h3>
+        <h4>Small description</h4>
+        <img
+          src="https://i5.walmartimages.com/asr/949b3d42-8f36-43b1-a7f5-6d7ecd2f3b93.d19162940a28e3ff1139216526dec307.jpeg"
+          alt=""
+        />
+        <h4 id="price">price : 450DA</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          autem quasi itaque!
+        </p>
+      </div> -->
     </section>
+
+    <script>
+        const container = document.querySelector(".container");
+        this.onload = () => {
+            fetch("http://127.0.0.1:1337/product").then((res) =>
+                res.json().then((data) => {
+                    data.products.forEach((singleProduct) => {
+                        const product = `
+     <div class="product">
+        <h3>${singleProduct.name}</h3>
+        <img
+          src=${singleProduct.img}
+          alt=${singleProduct.name}
+        />
+        <h4 id="price">${singleProduct.price} DA</h4>
+        <p>
+          ${singleProduct.desc}
+        </p>
+      </div>
+      `;
+                        const cont = document.createElement("div");
+                        cont.innerHTML = product;
+                        container.append(cont);
+                    });
+                })
+            );
+        };
+    </script>
 </body>
 
 </html>

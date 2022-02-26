@@ -20,6 +20,7 @@ body {
 .product img {
     width: auto;
     height: 300px;
+    max-width: 300px;
     display: block;
     margin: auto;
 }

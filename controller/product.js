@@ -13,3 +13,14 @@ export const createProduct = (req, res, next) => {
             res.json({ message: err.message });
         });
 };
+
+export const getAllProducts = (req, res, next) => {
+    Product.find({})
+        .exec()
+        .then((result) => {
+            res.json({ products: result });
+        })
+        .catch((err) => {
+            res.json({ message: err.message });
+        });
+};
