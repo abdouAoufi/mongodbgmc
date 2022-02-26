@@ -64,7 +64,7 @@ btn.addEventListener("click", () => {
         img: img.value,
         id: currentIdProduct,
     };
-    fetch("http://127.0.0.1:1337/product", {
+    fetch("https://shop-gmc.herokuapp.com/product", {
         method: "PUT",
         body: JSON.stringify(payload),
         headers: {
@@ -84,7 +84,7 @@ deleteBtn.addEventListener("click", () => {
     const payload = {
         id: currentIdProduct,
     };
-    fetch("http://127.0.0.1:1337/product", {
+    fetch("https://shop-gmc.herokuapp.com/product", {
         method: "DELETE",
         body: JSON.stringify(payload),
         headers: {
