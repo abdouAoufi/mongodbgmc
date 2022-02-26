@@ -41,6 +41,7 @@ function getData() {
                 updateBtn.addEventListener("click", () => {
                     // alert(JSON.stringify(singleProduct, null, 2));
                     updateContainer.style.display = "grid";
+                    window.scrollTo(0, 0);
                     name.value = singleProduct.name;
                     price.value = singleProduct.price;
                     img.value = singleProduct.img;
